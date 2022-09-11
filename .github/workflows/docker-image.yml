@@ -1,4 +1,4 @@
-name: ci
+name: build and push image
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: sanchezsv/web-server
+          images: sanchezsv/webserver
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
